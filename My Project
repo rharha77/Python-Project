@@ -1,0 +1,16 @@
+name = input("What is your name? ")
+rate = float(input("What is your hourly pay rate? "))
+hours = float(input("How many hours did you work? "))
+if hours <= 40:
+    gross = rate * hours
+elif hours > 40:
+    gross = rate * 40
+    gross += 1.5 * (hours - 40) * rate
+print(f"{name}")
+print(gross)
+print(f"Hours worked {hours}")
+print(f"Hourly rate {rate}")
+print(f"Regular pay {rate * hours}")
+print(f"Fed Tax {gross * .10}")
+print(f"State Tax {gross * .06}")
+print(f"FICA {gross * .03}")
